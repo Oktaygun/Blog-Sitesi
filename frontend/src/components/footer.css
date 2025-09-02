@@ -1,0 +1,36 @@
+.footer {
+  background-color: #32c5d9; 
+  color: #000000;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.footer-icons svg {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-icons svg:hover {
+  color: #00c6b4;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

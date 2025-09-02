@@ -1,0 +1,89 @@
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: rgb(22, 178, 183);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-form input {
+  padding: 12px;
+  border: 2px solid #296fb4;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+.auth-form input::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.auth-form input:focus {
+  border-color: #1abc9c;
+
+  background-color: #ffffff;
+
+  outline: none;
+  color: #000000;
+  box-shadow: 0 0 8px 2px rgba(26, 188, 156, 0.6);
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: #070731;
+
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #070731;
+
+}
+
+.auth-message {
+  margin-top: 15px;
+  color: #e74c3c;
+
+  font-weight: 500;
+  text-align: center;
+}
+
+.password-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #090f4fff;
+  font-size: 18px;
+  user-select: none;
+  z-index: 10;
+}

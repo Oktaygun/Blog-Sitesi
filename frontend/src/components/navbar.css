@@ -1,0 +1,251 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #16b2b7;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+/* === Sol === */
+.navbar__left {
+  flex: 1;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* === Orta === */
+.navbar__center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__center a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar__center a:hover {
+  color: #000000;
+}
+
+/* === Dropdown === */
+.navbar__dropdown {
+  position: relative;
+}
+
+.dropdown__toggle {
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown__toggle:focus {
+  outline: none;
+}
+
+.dropdown__toggle:hover {
+  color: #000000;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  padding: 8px 0;
+  list-style: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown__menu.open {
+  display: block;
+}
+
+.dropdown__menu li {
+  padding: 8px 16px;
+}
+
+.dropdown__menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown__menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown__menu li:hover a {
+  color: #16b2b7;
+}
+
+/* === Sağ === */
+.navbar__right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  background: #16b2b7;
+  color: rgb(255, 255, 255);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #16b2b7;
+  color: rgb(0, 0, 0);
+}
+
+/* === Hamburger === */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.navbar__hamburger span {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+
+  .navbar__center,
+  .navbar__right {
+    flex: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #16b2b7;
+    padding: 16px;
+    gap: 16px;
+    display: none;
+  }
+
+  .navbar__center.open {
+    display: flex;
+  }
+
+  .dropdown__menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown__menu li a {
+    color: white;
+  }
+
+  .dropdown__menu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.auth-mobile {
+  display: none;
+}
+
+.auth-desktop {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .auth-desktop {
+    display: none;
+  }
+
+  .auth-mobile {
+    display: block;
+  }
+
+  .auth-mobile a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    font-weight: bold;
+  }
+
+  .auth-mobile a:hover {
+    color: #16b2b7;
+  }
+}
+
+.profile-icon-btn svg {
+  width: 32px;
+  height: 32px;
+  color: #fff9f9;
+  transition: color 0.3s ease;
+}
+
+.profile-icon-btn:hover svg {
+  color: #000000;
+
+}
+
+.logout-icon-btn svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+
+  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-icon-btn:hover svg {
+  color: #ff0000;
+
+}
+
+.logout-icon-btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logout-icon-btn:focus,
+.logout-icon-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}

@@ -1,0 +1,28 @@
+.blog1-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.blog1-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.blog1-image {
+  width: 100%;
+  margin-bottom: 24px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.blog1-container p {
+  font-size: 1rem;
+
+  line-height: 1.6;
+  color: #374151;
+
+}
